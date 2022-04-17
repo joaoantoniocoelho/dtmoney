@@ -14,7 +14,7 @@ createServer({
         {
           id: 1,
           title: "Transaction 1",
-          type: "Deposit",
+          type: "deposit",
           category: "Category 1",
           amount: 6500,
           createdAt: new Date(),
@@ -22,7 +22,7 @@ createServer({
         {
           id: 2,
           title: "Transaction 2",
-          type: "Withdraw",
+          type: "withdraw",
           category: "Category 2",
           amount: 1500,
           createdAt: new Date(),
