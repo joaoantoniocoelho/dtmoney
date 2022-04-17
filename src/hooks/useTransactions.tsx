@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useEffect, useState } from "react";
+import { createContext, ReactNode, useContext, useEffect, useState } from "react";
 import { api } from "../services/api";
 
 interface TransactionProviderProps {
@@ -25,6 +25,7 @@ export const TransactionsContext = createContext<TransactionsContextData>(
   {} as TransactionsContextData
 );
 
+// use only on App.tsx
 export function TransactionsProvider({ children }: TransactionProviderProps) {
   const [transactions, setTransactions] = useState<Transaction[]>([]);
 
@@ -49,4 +50,10 @@ export function TransactionsProvider({ children }: TransactionProviderProps) {
       {children}
     </TransactionsContext.Provider>
   );
+}
+
+export function useTransactions() {
+  const context = useContext(TransactionsContext);
+  
+  return context;
 }

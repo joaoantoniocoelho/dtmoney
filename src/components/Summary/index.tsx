@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import incomeImg from "../../assets/income.svg";
 import outcomeImg from "../../assets/outcome.svg";
 import totalImg from "../../assets/total.svg";
-import { TransactionsContext } from "../../context/TransactionsContext";
+import { TransactionsContext } from "../../hooks/useTransactions";
 
 import { Container } from "./styles";
 
